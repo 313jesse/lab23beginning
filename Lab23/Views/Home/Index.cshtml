@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<table border="1" class="table">
+    <tr>
+        <th>UserName</th>
+        <th>UserID</th>
+        <th>Address</th>
+        <th>RegisterDate</th>
+
+    </tr>
+    @foreach(var user in ViewBag.Users)
+    {
+    <tr>
+        <td>@user.UserName</td>
+        <td>@user.UserID</td>
+        <td>@user.Address</td>
+        <td>@user.RegisterDate</td>
+
+
+        @*<td><a href="/Home/DeleteItem?itemid=@item.itemID" onclick="return confirm('You sure?')">Delete</a></td>*@
+
+        @*<td><a href="/Home/ItemDetails?itemid=@item.itemID">Update</a></td>*@
+
+    </tr>
+    }
+</table>
